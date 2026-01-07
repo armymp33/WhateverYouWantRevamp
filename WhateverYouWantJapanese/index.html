@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatever You Want - Japanese steakhouse in Springfield - Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Fixed Background Food Truck -->
+    <div class="fixed-background-truck">
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&h=600&fit=crop" alt="Whatever You Want Food Truck" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Crect fill=%22%23000%22 width=%22800%22 height=%22600%22/%3E%3Ctext fill=%22%23FFD700%22 font-family=%22sans-serif%22 font-size=%2248%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EWHATEVER YOU WANT%3C/text%3E%3C/svg%3E'">
+    </div>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Whatever You Want</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">about</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav-link">menu</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">service</a></li>
+                    <li class="nav-item"><a href="photos.html" class="nav-link">photo</a></li>
+                </ul>
+            </nav>
+            <button class="cart-icon-btn" onclick="openCart()">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <a href="admin.html" class="admin-link" style="margin-left: 10px; padding: 10px 15px; background: var(--color-accent); color: var(--color-primary); border: 2px solid var(--color-primary); border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; text-transform: uppercase;">Owner</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section with Food Truck -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-image">
+                    <img src="images/truck - Copy.png" alt="Whatever You Want Food Truck - Black truck with yellow sunflowers and green leaves">
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Whatever You Want</h1>
+                    <p class="hero-subtitle">Fusion Cuisine Food Truck</p>
+                    <p class="hero-description">Experience the perfect blend of Mexican, Asian, and Japanese flavors in every bite!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Image Gallery -->
+        <section class="top-gallery-section">
+            <div class="top-gallery-wrapper">
+                <button class="carousel-arrow carousel-arrow-left" onclick="scrollGallery(-1)">‹</button>
+                <div class="top-gallery-container" id="topGallery">
+                    <div class="top-gallery-item">
+                        <img src="https://fnb.com-photos.com/97902/whatever-you-want-AF1QipNaz7eSBIq6ohEEBKeH5_lM5losfU2IWJ_4Bf6X.jpg" alt="Whatever You Want food">
+                    </div>
+                    <div class="top-gallery-item">
+                        <img src="https://fnb.com-photos.com/97902/whatever-you-want-AF1QipPyMC5UE3I72nrLYq-B7gECZYB-a0Zu9ZI2BLHH.jpg" alt="Whatever You Want food">
+                    </div>
+                    <div class="top-gallery-item">
+                        <img src="https://fnb.com-photos.com/97902/whatever-you-want-AF1QipO-sM11fDKLIsPnp-SVCSCq6-lpCs9fKTBdUCIT.jpg" alt="Whatever You Want food">
+                    </div>
+                    <div class="top-gallery-item">
+                        <img src="https://fnb.com-photos.com/97902/whatever-you-want-AF1QipNnq74Vo-WMls10guPpCnT-IOl6jQeVRmGnXIQm.jpg" alt="Whatever You Want food">
+                    </div>
+                    <div class="top-gallery-item">
+                        <img src="https://fnb.com-photos.com/97902/whatever-you-want-AF1QipNXCGjKY52zlGU1lK98HHrRy7mLHscM8AViNq7W.jpg" alt="Whatever You Want food">
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-arrow-right" onclick="scrollGallery(1)">›</button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
+                <span class="dot" onclick="goToSlide(4)"></span>
+            </div>
+        </section>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <p>Welcome to Whatever You Want, a culinary gem that brings together an exciting fusion of flavors and dishes to satisfy every palate. This vibrant establishment is known for its inviting atmosphere, where contemporary design meets comfortable dining spaces—both indoors and outdoors—perfectly suited for a casual meal or special occasion. With a diverse menu featuring unique offerings like the popular hibachi burrito and flavorful tacos, Whatever You Want is designed to cater to all food enthusiasts seeking something extraordinary. The commitment to quality shines through with each dish prepared fresh using high-quality ingredients while accommodating dietary restrictions with ease. Whether it's savory egg rolls, creamy crab rangoons topped with fresh cilantro, or hearty teriyaki options bursting with flavor—the culinary variety ensures there's always something new for customers eager to explore the extensive selection. Coupled with attentive service from friendly staff dedicated to creating memorable dining experiences makes this restaurant truly stand out as a must-visit destination in the area.</p>
+            </div>
+        </section>
+
+        <!-- Content Sections -->
+        <section class="content-sections">
+            <div class="content-block">
+                <h3 class="content-heading">Culinary Delights Await at This Unique Eatery</h3>
+                <p>The menu features a delightful fusion of flavors, including signature dishes like the Hibachi Burrito and Mexican-inspired sushi rolls. Guests rave about the creamy cheese rangoons and fresh teriyaki options that cater to various dietary preferences. Whether indulging in hearty burritos or exploring vegetarian selections, there is something for everyone seeking comfort food with an exciting twist. Diners are sure to enjoy creative combinations crafted from quality ingredients that showcase culinary expertise while tantalizing taste buds.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="content-heading">Visual Feast: Experience the Ambiance</h3>
+                <p>Patrons are welcomed into a vibrant setting filled with eye-catching decor that enhances their dining experience. Signature dishes are beautifully presented, making them Instagram-worthy delights ready for sharing online. From colorful tacos topped with cilantro to elegantly plated sushi rolls, each dish promises both visual appeal and incredible taste inviting guests back time after time.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="content-heading">Exceptional Services That Enhance Every Visit</h3>
+                <p>This establishment offers a range of services tailored for customer satisfaction such as dine-in experiences where friendly staff ensure quick service during busy hours alongside takeout options ideal for those on-the-go meals. With meticulous attention given to accommodating dietary restrictions, it elevates the level of personalized care ensuring every visit feels special while catering effectively whether customers choose takeaway or seated dining.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="content-heading">Flexible Payment Options Available</h3>
+                <p>The restaurant accepts numerous payment methods including major credit cards and mobile payments allowing convenience at checkout times while cash remains welcome too offering flexibility suited towards varied customer needs along with potential loyalty programs encouraging repeat visits rewarding dedicated patrons further enhancing overall value when enjoying delicious cuisine here.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="content-heading">Your Reservation Awaits: Book Ahead!</h3>
+                <p>If planning ahead is preferred then reservations can be made by calling +1 4176312503 which allows diners peace of mind securing tables during peak times ensuring they do not miss out on enjoyable culinary experiences provided by this renowned establishment known far beyond just excellent food offerings but outstanding hospitality throughout any meal shared together indoors or outside under protective coverings designed thoughtfully considering guest comfort levels accordingly even amidst changing weather conditions over seasons enjoyed year-round consistently well-maintained facilities welcoming all who enter through doors eagerly anticipating delectable bites served graciously upon request without delay ensured utmost enjoyment await within these walls established firmly across diverse community neighborhoods alike!</p>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section class="reviews-section">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-avatar" style="background-color: #8B4513; color: white;">P</div>
+                    <div class="review-content">
+                        <h3 class="reviewer-name">Praggnya Ambati</h3>
+                        <p class="review-text">Best tacos everrr</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar">
+                        <img src="images/avatar-meg.jpg" alt="Meg Jeager" class="avatar-img">
+                        <span class="avatar-badge">★</span>
+                    </div>
+                    <div class="review-content">
+                        <h3 class="reviewer-name">Meg Jeager</h3>
+                        <p class="review-text">BEST FUSION FOOD EVER MUST VISIT Food</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar">
+                        <img src="images/avatar-neha.jpg" alt="Neha singuluri" class="avatar-img">
+                    </div>
+                    <div class="review-content">
+                        <h3 class="reviewer-name">Neha singuluri</h3>
+                        <p class="review-text">Good food. Finger licking delicious.</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar" style="background-color: #800080; color: white;">
+                        <span>J</span>
+                        <span class="avatar-badge">★</span>
+                    </div>
+                    <div class="review-content">
+                        <h3 class="reviewer-name">Joshua fedoryszyn</h3>
+                        <p class="review-text">A bit pricey for how bland the food was.</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar" style="background-color: #008000; color: white;">J</div>
+                    <div class="review-content">
+                        <h3 class="reviewer-name">Justin Potts</h3>
+                        <p class="review-text">Food and service are always great! 10/10 for sure</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar" style="background-color: #8B4513; color: white;">P</div>
+                    <div class="review-content">
+                        <h3 class="reviewer-name">P R</h3>
+                        <p class="review-text">Great for trying new foods. A huge variety, all made greatly</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar" style="background-color: #FF6B6B; color: white;">T</div>
+                    <div class="review-content">
+                        <h3 class="reviewer-name">Turtle M Pinkish Gnome</h3>
+                        <p class="review-text">Never open and always a fool smell coming from it.</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar" style="background-color: #4ECDC4; color: white;">R</div>
+                    <div class="review-content">
+                        <h3 class="reviewer-name">Russ Powers</h3>
+                        <p class="review-text">Excellent food! We tried the hibachi and Chinese food and it was great! Highly recommend</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar" style="background-color: #95E1D3; color: white;">C</div>
+                    <div class="review-content">
+                        <h3 class="reviewer-name">Caitlynn Jenks</h3>
+                        <p class="review-text">Great food, at amazing prices. The customer service was top notch. Can't wait to come back!</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar" style="background-color: #F38181; color: white;">O</div>
+                    <div class="review-content">
+                        <h3 class="reviewer-name">Owen Johnston</h3>
+                        <p class="review-text">I had 2 breaded chicken tacos and I was not impressed. But the dining room outside was pretty and the servers were friendly</p>
+                    </div>
+                </div>
+            </div>
+            <div class="see-more">
+                <a href="#" class="see-more-link">See More</a>
+            </div>
+        </section>
+
+        <!-- Following the Map Section -->
+        <section class="map-section">
+            <h2 class="section-title">Following the Map</h2>
+            <h3 class="subsection-title">Must-Visit Destinations</h3>
+            <div class="destinations-container">
+                <div class="destination-item">
+                    <h4 class="destination-name">The Press Coffee & Juice Bar</h4>
+                    <p class="destination-address">2710 S Glenstone Ave, Springfield, MO 65804, United States</p>
+                </div>
+                <div class="destination-item">
+                    <h4 class="destination-name">The Urban Food Brood</h4>
+                    <p class="destination-address">250 Albany St, Springfield, MA 01105, United States</p>
+                </div>
+                <div class="destination-item">
+                    <h4 class="destination-name">Taqueria Huatulco</h4>
+                    <p class="destination-address">904 Memorial Blvd, Springfield, TN 37172, United States</p>
+                </div>
+                <div class="destination-item">
+                    <h4 class="destination-name">Lee Ann's Dairy Delight</h4>
+                    <p class="destination-address">619 E High St, Springfield, OH 45505, United States</p>
+                </div>
+                <div class="destination-item">
+                    <h4 class="destination-name">THE GRILLE AT CITY CENTRE</h4>
+                    <p class="destination-address">700 E Adams St, Springfield, IL 62701, United States</p>
+                </div>
+                <div class="destination-item">
+                    <h4 class="destination-name">Our Hero Subs</h4>
+                    <p class="destination-address">1802 E Main St, Springfield, OH 45503, United States</p>
+                </div>
+                <div class="destination-item">
+                    <h4 class="destination-name">VS DONUTS</h4>
+                    <p class="destination-address">1100 Upper Valley Pike, Springfield, OH 45504, United States</p>
+                </div>
+                <div class="destination-item">
+                    <h4 class="destination-name">The Bolivian Sabor</h4>
+                    <p class="destination-address">6715 Backlick Rd, Springfield, VA 22150, United States</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Image Gallery -->
+        <section class="gallery-section">
+            <div class="gallery-indicator">▼</div>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://fnb.com-photos.com/97902/whatever-you-want-AF1QipNaz7eSBIq6ohEEBKeH5_lM5losfU2IWJ_4Bf6X.jpg" alt="Whatever You Want food">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://fnb.com-photos.com/97902/whatever-you-want-AF1QipPyMC5UE3I72nrLYq-B7gECZYB-a0Zu9ZI2BLHH.jpg" alt="Whatever You Want food">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://fnb.com-photos.com/97902/whatever-you-want-AF1QipO-sM11fDKLIsPnp-SVCSCq6-lpCs9fKTBdUCIT.jpg" alt="Whatever You Want food">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://fnb.com-photos.com/97902/whatever-you-want-AF1QipNnq74Vo-WMls10guPpCnT-IOl6jQeVRmGnXIQm.jpg" alt="Whatever You Want food">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://fnb.com-photos.com/97902/whatever-you-want-AF1QipNXCGjKY52zlGU1lK98HHrRy7mLHscM8AViNq7W.jpg" alt="Whatever You Want food">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://fnb.com-photos.com/97902/whatever-you-want-AF1QipNaz7eSBIq6ohEEBKeH5_lM5losfU2IWJ_4Bf6X.jpg" alt="Whatever You Want food">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <h2>Whatever You Want</h2>
+                    </a>
+                    <div class="contact-details">
+                        <p class="contact-info"><strong>Address:</strong> 2463 W Sunshine St, Springfield, MO 65807, United States</p>
+                        <p class="contact-info"><strong>Phone:</strong> <a href="tel:+14176312503" class="footer-link">+1 417 631 2503</a></p>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <div class="opening-hours">
+                        <h3 class="footer-heading">Opening Hours</h3>
+                        <div class="hours-list">
+                            <div class="hours-item"><span class="day">Monday</span><span class="time">11:00 AM - 9:00 PM</span></div>
+                            <div class="hours-item"><span class="day">Tuesday</span><span class="time">11:00 AM - 9:00 PM</span></div>
+                            <div class="hours-item"><span class="day">Wednesday</span><span class="time">11:00 AM - 9:00 PM</span></div>
+                            <div class="hours-item"><span class="day">Thursday</span><span class="time">11:00 AM - 9:00 PM</span></div>
+                            <div class="hours-item"><span class="day">Friday</span><span class="time">11:00 AM - 9:00 PM</span></div>
+                            <div class="hours-item"><span class="day">Saturday</span><span class="time">11:00 AM - 11:00 PM</span></div>
+                            <div class="hours-item"><span class="day">Sunday</span><span class="time">10:00 AM - 2:30 PM</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 5;
+
+        function updateDots(activeIndex) {
+            const dots = document.querySelectorAll('.top-gallery-section .dot');
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            const gallery = document.getElementById('topGallery');
+            if (!gallery) return;
+            
+            const galleryItems = gallery.querySelectorAll('.top-gallery-item');
+            if (slideIndex >= 0 && slideIndex < galleryItems.length) {
+                const targetItem = galleryItems[slideIndex];
+                const galleryRect = gallery.getBoundingClientRect();
+                const itemRect = targetItem.getBoundingClientRect();
+                const scrollLeft = gallery.scrollLeft + (itemRect.left - galleryRect.left) - (galleryRect.width / 2) + (itemRect.width / 2);
+                
+                gallery.scrollTo({
+                    left: scrollLeft,
+                    behavior: 'smooth'
+                });
+                updateDots(slideIndex);
+            }
+        }
+
+        function scrollGallery(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+            goToSlide(currentSlide);
+        }
+
+        // Update active dot based on scroll position
+        const gallery = document.getElementById('topGallery');
+        if (gallery) {
+            gallery.addEventListener('scroll', () => {
+                const galleryItems = gallery.querySelectorAll('.top-gallery-item');
+                if (galleryItems.length === 0) return;
+                
+                const galleryRect = gallery.getBoundingClientRect();
+                const galleryCenter = galleryRect.left + galleryRect.width / 2;
+                
+                let closestIndex = 0;
+                let closestDistance = Infinity;
+                
+                galleryItems.forEach((item, index) => {
+                    const itemRect = item.getBoundingClientRect();
+                    const itemCenter = itemRect.left + itemRect.width / 2;
+                    const distance = Math.abs(itemCenter - galleryCenter);
+                    
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestIndex = index;
+                    }
+                });
+                
+                if (closestIndex !== currentSlide) {
+                    currentSlide = closestIndex;
+                    updateDots(closestIndex);
+                }
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateDots(0);
+        });
+    </script>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <span class="close-cart" onclick="closeCart()">&times;</span>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart-message">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn" onclick="startCheckout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content checkout-content">
+            <span class="close-modal" onclick="closeCheckoutModal()">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkoutForm" class="checkout-form">
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone *</label>
+                    <input type="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email">
+                </div>
+                <div class="form-group">
+                    <label>Pickup Time *</label>
+                    <input type="datetime-local" required>
+                </div>
+                <div class="form-group">
+                    <label>Special Instructions</label>
+                    <textarea rows="3"></textarea>
+                </div>
+                <div class="checkout-total">
+                    <strong>Total: $<span id="checkoutTotal">0.00</span></strong>
+                </div>
+                <button type="submit" class="submit-order-btn">Submit Order</button>
+                <p class="checkout-note">Payment will be processed when you pick up your order.</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
+

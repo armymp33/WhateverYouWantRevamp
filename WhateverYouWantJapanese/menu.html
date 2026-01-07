@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatever You Want Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Fixed Background Food Truck -->
+    <div class="fixed-background-truck">
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&h=600&fit=crop" alt="Whatever You Want Food Truck" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Crect fill=%22%23000%22 width=%22800%22 height=%22600%22/%3E%3Ctext fill=%22%23FFD700%22 font-family=%22sans-serif%22 font-size=%2248%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EWHATEVER YOU WANT%3C/text%3E%3C/svg%3E'">
+    </div>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Whatever You Want</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">about</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav-link active">menu</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">service</a></li>
+                    <li class="nav-item"><a href="photos.html" class="nav-link">photo</a></li>
+                </ul>
+            </nav>
+            <button class="cart-icon-btn" onclick="openCart()">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <a href="admin.html" class="admin-link" style="margin-left: 10px; padding: 10px 15px; background: var(--color-accent); color: var(--color-primary); border: 2px solid var(--color-primary); border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; text-transform: uppercase;">Owner</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Menu Banner -->
+        <section class="banner-section">
+            <div class="banner orange-banner">
+                <h2>Whatever You Want Menu</h2>
+            </div>
+        </section>
+
+        <!-- Contact Note -->
+        <section class="contact-note-section">
+            <div class="contact-note-container">
+                <p class="contact-note-text">If you would like to know more about upcoming changes, please contact the phone number: <a href="tel:+14176312503" class="contact-phone-link">+1 417 631 2503</a></p>
+            </div>
+        </section>
+
+        <!-- Menu Info Sections (3 Columns) -->
+        <section class="menu-info-sections">
+            <!-- Menu Overview Section -->
+            <div class="menu-info-section">
+                <div class="content-container">
+                    <h3 class="content-title">Menu Overview</h3>
+                    <p class="content-text">
+                        The menu at Whatever You Want offers a captivating fusion of Mexican and Asian cuisines, with an emphasis on vibrant flavors and unique culinary influences. Signature dishes like the Hibachi Burrito showcase innovative cooking techniques that blend traditional methods with modern flair. This diverse menu is thoughtfully designed around seasonal ingredients sourced from local farmers to ensure freshness in every bite. Specialties such as cream cheese rangoons exemplify the restaurant's commitment to creative comfort food, making it a delightful dining experience for all patrons seeking something extraordinary.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Dietary Options Section -->
+            <div class="menu-info-section">
+                <div class="content-container">
+                    <h3 class="content-title">Dietary Options</h3>
+                    <p class="content-text">
+                        Whatever You Want prioritizes inclusivity by providing a variety of dietary options tailored to different preferences and restrictions. The menu features delicious vegetarian and vegan selections alongside gluten-free choices that cater to health-conscious diners without compromising flavor or satisfaction. Allergen awareness is paramount; staff members are trained to assist guests with specific needs, ensuring meals can be customized effectively for individual requirements. Additionally, special dietary menus are available upon request, further enhancing the accessibility of this unique dining destination.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Menu Highlights Section -->
+            <div class="menu-info-section">
+                <div class="content-container">
+                    <h3 class="content-title">Menu Highlights and Specialties</h3>
+                    <p class="content-text">
+                        The standout dishes at Whatever You Want include signature offerings like the King Kong Burrito and Scarface sushi roll, celebrated for their exceptional taste combinations that surprise the palate while satisfying hunger cravings! Each dish reflects bold flavors—such as fresh crab rangoons topped with cilantro—that elevate classic favorites into new culinary experiences. With popular items consistently recommended by customers—including tacos bursting with freshness—the highlighted specialties truly embody what makes this restaurant an unmissable hotspot for those seeking exquisite fusion cuisine.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Items -->
+        <section class="menu-items-section">
+            <!-- Mexican Section -->
+            <div class="menu-category">
+                <h2 class="category-title">Mexican Dishes</h2>
+                
+                <!-- Tacos -->
+                <div class="menu-subcategory">
+                    <h3 class="subcategory-title">Tacos</h3>
+                    <p class="subcategory-description">Topped with cilantro and onion.</p>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1565299585323-38174c3b4a5c?w=400&h=300&fit=crop" alt="Taco Asada" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EAsada Taco%3C/text%3E%3C/svg%3E'">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Asada (Steak)</h4>
+                                <p class="item-price">$2.75</p>
+                                <button class="add-to-cart-btn" onclick='openCustomizationModal("Asada (Steak)", 2.75, "Tacos")'>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1565299585323-38174c3b4a5c?w=400&h=300&fit=crop" alt="Taco Pollo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EPollo Taco%3C/text%3E%3C/svg%3E'">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Pollo (Shredded Chicken)</h4>
+                                <p class="item-price">$2.75</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1565299585323-38174c3b4a5c?w=400&h=300&fit=crop" alt="Taco Barbacoa" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EBarbacoa Taco%3C/text%3E%3C/svg%3E'">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Barbacoa (Shredded Beef)</h4>
+                                <p class="item-price">$2.75</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&h=300&fit=crop" alt="Quesa Birria Taco" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EQuesa Birria%3C/text%3E%3C/svg%3E'">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Quesa Birria</h4>
+                                <p class="item-price">$3.25</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/taco-milanesa-pollo.jpg" alt="Milanesa Pollo Taco">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Milanesa Pollo (Breaded chicken)</h4>
+                                <p class="item-price">$3.25</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/taco-lengua.jpg" alt="Taco Lengua">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Lengua (Tongue)</h4>
+                                <p class="item-price">$3.25</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/taco-cachete.jpg" alt="Taco Cachete">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Cachete (Cow Cheek)</h4>
+                                <p class="item-price">$3.25</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/taco-tripa.jpg" alt="Taco Tripa">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Tripa (Intestine)</h4>
+                                <p class="item-price">$3.25</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Burritos/Tortas -->
+                <div class="menu-subcategory">
+                    <h3 class="subcategory-title">Burritos/Tortas</h3>
+                    <p class="subcategory-description">Filled with refried beans, lettuce, sour cream, avocado, onion, tomato.</p>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/burrito-asada.jpg" alt="Burrito Asada">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Asada (Steak)</h4>
+                                <p class="item-price">$11.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/burrito-pollo.jpg" alt="Burrito Pollo">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Pollo (Shredded Chicken)</h4>
+                                <p class="item-price">$11.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/burrito-barbacoa.jpg" alt="Burrito Barbacoa">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Barbacoa (Shredded Beef)</h4>
+                                <p class="item-price">$13.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/burrito-quesa-birria.jpg" alt="Quesa Birria Burrito">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Quesa Birria</h4>
+                                <p class="item-price">$13.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/burrito-milanesa-pollo.jpg" alt="Milanesa Pollo Burrito">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Milanesa Pollo (Breaded chicken)</h4>
+                                <p class="item-price">$11.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/burrito-lengua.jpg" alt="Burrito Lengua">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Lengua (Tongue)</h4>
+                                <p class="item-price">$13.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/burrito-cachete.jpg" alt="Burrito Cachete">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Cachete (Cow Cheek)</h4>
+                                <p class="item-price">$13.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/burrito-tripa.jpg" alt="Burrito Tripa">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Tripa (Intestine)</h4>
+                                <p class="item-price">$13.50</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quesadillas -->
+                <div class="menu-subcategory">
+                    <h3 class="subcategory-title">Quesadillas</h3>
+                    <p class="subcategory-description">Filled with cheese and choice of meat.</p>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/quesadilla-asada.jpg" alt="Quesadilla Asada">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Asada (Steak)</h4>
+                                <p class="item-price">$13.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1618040996337-56904b7850b9?w=400&h=300&fit=crop" alt="Quesadilla Pollo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EChicken Quesadilla%3C/text%3E%3C/svg%3E'">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Pollo (Shredded Chicken)</h4>
+                                <p class="item-price">$11.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/quesadilla-barbacoa.jpg" alt="Quesadilla Barbacoa">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Barbacoa (Shredded Beef)</h4>
+                                <p class="item-price">$15.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/quesadilla-quesa-birria.jpg" alt="Quesa Birria Quesadilla">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Quesa Birria</h4>
+                                <p class="item-price">$15.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/quesadilla-milanesa-pollo.jpg" alt="Milanesa Pollo Quesadilla">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Milanesa Pollo (Breaded chicken)</h4>
+                                <p class="item-price">$13.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/quesadilla-lengua.jpg" alt="Quesadilla Lengua">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Lengua (Tongue)</h4>
+                                <p class="item-price">$15.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/quesadilla-cachete.jpg" alt="Quesadilla Cachete">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Cachete (Cow Cheek)</h4>
+                                <p class="item-price">$15.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/quesadilla-tripa.jpg" alt="Quesadilla Tripa">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Tripa (Intestine)</h4>
+                                <p class="item-price">$15.50</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hibachi Section -->
+            <div class="menu-category">
+                <h2 class="category-title">Hibachi Dishes</h2>
+                <p class="category-description">Comes with fried rice, noodles, vegetables.</p>
+                <div class="menu-items-grid">
+                    <div class="menu-item-card">
+                        <div class="menu-item-image">
+                            <img src="images/menu/hibachi-tofu.jpg" alt="Teriyaki Tofu">
+                        </div>
+                        <div class="menu-item-info">
+                            <h4 class="item-name">Teriyaki Tofu</h4>
+                            <p class="item-price">$14.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="menu-item-image">
+                            <img src="images/menu/hibachi-vegetables.jpg" alt="Vegetables">
+                        </div>
+                        <div class="menu-item-info">
+                            <h4 class="item-name">Vegetables</h4>
+                            <p class="item-price">$14.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="menu-item-image">
+                            <img src="images/menu/hibachi-chicken.jpg" alt="Teriyaki Chicken">
+                        </div>
+                        <div class="menu-item-info">
+                            <h4 class="item-name">Teriyaki Chicken</h4>
+                            <p class="item-price">$14.00</p>
+                        </div>
+                    </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop" alt="Steak" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EHibachi Steak%3C/text%3E%3C/svg%3E'">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Steak</h4>
+                                <p class="item-price">$15.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop" alt="Shrimp" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EHibachi Shrimp%3C/text%3E%3C/svg%3E'">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Shrimp</h4>
+                                <p class="item-price">$16.00</p>
+                            </div>
+                        </div>
+                    <div class="menu-item-card">
+                        <div class="menu-item-image">
+                            <img src="images/menu/hibachi-salmon.jpg" alt="Teriyaki Salmon">
+                        </div>
+                        <div class="menu-item-info">
+                            <h4 class="item-name">Teriyaki Salmon</h4>
+                            <p class="item-price">$22.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="menu-item-image">
+                            <img src="images/menu/hibachi-filet.jpg" alt="Filet Mignon">
+                        </div>
+                        <div class="menu-item-info">
+                            <h4 class="item-name">Filet Mignon</h4>
+                            <p class="item-price">$25.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="menu-item-image">
+                            <img src="images/menu/hibachi-combo18.jpg" alt="Combo 18">
+                        </div>
+                        <div class="menu-item-info">
+                            <h4 class="item-name">Combo 18 (pick 2: chicken, steak, shrimp)</h4>
+                            <p class="item-price">$18.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="menu-item-image">
+                            <img src="images/menu/hibachi-salmon-chicken.jpg" alt="Combo Salmon with Chicken">
+                        </div>
+                        <div class="menu-item-info">
+                            <h4 class="item-name">Combo Salmon w/ Chicken</h4>
+                            <p class="item-price">$19.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="menu-item-image">
+                            <img src="images/menu/hibachi-salmon-steak.jpg" alt="Combo Salmon with Steak">
+                        </div>
+                        <div class="menu-item-info">
+                            <h4 class="item-name">Combo Salmon w/ Steak</h4>
+                            <p class="item-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="menu-item-image">
+                            <img src="images/menu/hibachi-salmon-shrimp.jpg" alt="Combo Salmon with Shrimp">
+                        </div>
+                        <div class="menu-item-info">
+                            <h4 class="item-name">Combo Salmon w/ Shrimp</h4>
+                            <p class="item-price">$21.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chinese Section -->
+            <div class="menu-category">
+                <h2 class="category-title">Chinese Dishes</h2>
+                
+                <!-- Chicken/Tofu -->
+                <div class="menu-subcategory">
+                    <h3 class="subcategory-title">Chicken/Tofu</h3>
+                    <p class="subcategory-description">Breaded chicken or tofu served with fried rice. Available sauces: Sweet & Sour, General, Cashew, Sesame, Orange.</p>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/chinese-tofu.jpg" alt="Tofu">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Tofu</h4>
+                                <p class="item-price">$10.50 / $11.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/chinese-chicken.jpg" alt="Chicken">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Chicken</h4>
+                                <p class="item-price">$10.50 / $11.50</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Noodle/Rice -->
+                <div class="menu-subcategory">
+                    <h3 class="subcategory-title">Noodle/Rice</h3>
+                    <p class="subcategory-description">Lo Mein noodles or Fried rice.</p>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/noodle-chicken.jpg" alt="Chicken Noodle/Rice">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Chicken</h4>
+                                <p class="item-price">$9.75</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/noodle-beef.jpg" alt="Beef Noodle/Rice">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Beef</h4>
+                                <p class="item-price">$10.75</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/noodle-shrimp.jpg" alt="Shrimp Noodle/Rice">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Shrimp</h4>
+                                <p class="item-price">$11.75</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/noodle-vegetable.jpg" alt="Vegetable Noodle/Rice">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Vegetable</h4>
+                                <p class="item-price">$9.75</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/noodle-combination.jpg" alt="Combination Noodle/Rice">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Combination</h4>
+                                <p class="item-price">$12.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fusion Section -->
+            <div class="menu-category">
+                <h2 class="category-title">Fusion Dishes</h2>
+                <p class="category-description">Tacos come in orders of 3 with the same sauce and meat.</p>
+                
+                <!-- Chinese Burrito -->
+                <div class="menu-subcategory">
+                    <h3 class="subcategory-title">Chinese Burrito</h3>
+                    <p class="subcategory-description">Filled with fried rice, chicken, and topped with sauce. Available sauces: Sweet & Sour, Cashew, General, Sesame, Orange.</p>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/chinese-burrito-tofu.jpg" alt="Chinese Burrito Tofu">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Tofu</h4>
+                                <p class="item-price">$12.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/chinese-burrito-chicken.jpg" alt="Chinese Burrito Chicken">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Chicken</h4>
+                                <p class="item-price">$12.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chinese Taco -->
+                <div class="menu-subcategory">
+                    <h3 class="subcategory-title">Chinese Taco</h3>
+                    <p class="subcategory-description">Topped with cilantro and onion. Available sauces: Sweet & Sour, Cashew, General, Sesame, Orange.</p>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/chinese-taco-tofu.jpg" alt="Chinese Taco Tofu">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Tofu</h4>
+                                <p class="item-price">$10.50</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1565299585323-38174c3b4a5c?w=400&h=300&fit=crop" alt="Chinese Taco Chicken" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EChinese Taco%3C/text%3E%3C/svg%3E'">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Chicken</h4>
+                                <p class="item-price">$10.50</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hibachi Burrito -->
+                <div class="menu-subcategory">
+                    <h3 class="subcategory-title">Hibachi Burrito</h3>
+                    <p class="subcategory-description">Filled with fried rice and topped with Teriyaki sauce.</p>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/hibachi-burrito-tofu.jpg" alt="Hibachi Burrito Tofu">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Teriyaki Tofu</h4>
+                                <p class="item-price">$12.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/hibachi-burrito-vegetables.jpg" alt="Hibachi Burrito Vegetables">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Vegetables</h4>
+                                <p class="item-price">$12.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/hibachi-burrito-chicken.jpg" alt="Hibachi Burrito Chicken">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Teriyaki Chicken</h4>
+                                <p class="item-price">$12.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/hibachi-burrito-steak.jpg" alt="Hibachi Burrito Steak">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Steak</h4>
+                                <p class="item-price">$13.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/hibachi-burrito-shrimp.jpg" alt="Hibachi Burrito Shrimp">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Shrimp</h4>
+                                <p class="item-price">$13.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hibachi Taco -->
+                <div class="menu-subcategory">
+                    <h3 class="subcategory-title">Hibachi Taco</h3>
+                    <p class="subcategory-description">Topped with cilantro and onion.</p>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/hibachi-taco-tofu.jpg" alt="Hibachi Taco Tofu">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Teriyaki Tofu</h4>
+                                <p class="item-price">$10.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/hibachi-taco-vegetables.jpg" alt="Hibachi Taco Vegetables">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Vegetables</h4>
+                                <p class="item-price">$10.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/hibachi-taco-chicken.jpg" alt="Hibachi Taco Chicken">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Teriyaki Chicken</h4>
+                                <p class="item-price">$10.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/hibachi-taco-steak.jpg" alt="Hibachi Taco Steak">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Steak</h4>
+                                <p class="item-price">$11.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="images/menu/hibachi-taco-shrimp.jpg" alt="Hibachi Taco Shrimp">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Shrimp</h4>
+                                <p class="item-price">$11.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drinks Section -->
+            <div class="menu-category">
+                <h2 class="category-title">Drinks</h2>
+                <div class="menu-items-grid">
+                    <div class="menu-item-card">
+                        <div class="menu-item-image">
+                            <img src="images/menu/drink-aguas-frescas.jpg" alt="Aguas Frescas">
+                        </div>
+                        <div class="menu-item-info">
+                            <h4 class="item-name">Aguas Frescas</h4>
+                            <p class="item-description">Horchata con fresa, Pepino con limon</p>
+                            <p class="item-price">$3.99</p>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="menu-item-image">
+                            <img src="images/menu/drink-jarritos.jpg" alt="Jarritos">
+                        </div>
+                        <div class="menu-item-info">
+                            <h4 class="item-name">Jarritos</h4>
+                            <p class="item-description">Strawberry, Mandarin, Pineapple, Tamarind, Lime (availability may vary)</p>
+                            <p class="item-price">$2.99</p>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="menu-item-image">
+                            <img src="images/menu/drink-bottled-soda.jpg" alt="Bottled Soda">
+                        </div>
+                        <div class="menu-item-info">
+                            <h4 class="item-name">Bottled Soda</h4>
+                            <p class="item-description">Mexican Coke, Dr. Pepper, Sprite</p>
+                            <p class="item-price">$2.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Birria Ramen Section -->
+            <div class="menu-category">
+                <h2 class="category-title">Birria Ramen</h2>
+                <p class="category-description">Ramen noodles with our homemade consume and birria topped with cilantro and onion.</p>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop" alt="Birria Ramen" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EBirria Ramen%3C/text%3E%3C/svg%3E'">
+                            </div>
+                            <div class="menu-item-info">
+                                <h4 class="item-name">Birria Ramen</h4>
+                                <p class="item-price">$10.99</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <h2>Whatever You Want</h2>
+                    </a>
+                    <div class="contact-details">
+                        <p class="contact-info"><strong>Address:</strong> 2463 W Sunshine St, Springfield, MO 65807, United States</p>
+                        <p class="contact-info"><strong>Phone:</strong> <a href="tel:+14176312503" class="footer-link">+1 417 631 2503</a></p>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <div class="opening-hours">
+                        <h3 class="footer-heading">Opening Hours</h3>
+                        <div class="hours-list">
+                            <div class="hours-item"><span class="day">Monday</span><span class="time">11:00 AM - 9:00 PM</span></div>
+                            <div class="hours-item"><span class="day">Tuesday</span><span class="time">11:00 AM - 9:00 PM</span></div>
+                            <div class="hours-item"><span class="day">Wednesday</span><span class="time">11:00 AM - 9:00 PM</span></div>
+                            <div class="hours-item"><span class="day">Thursday</span><span class="time">11:00 AM - 9:00 PM</span></div>
+                            <div class="hours-item"><span class="day">Friday</span><span class="time">11:00 AM - 9:00 PM</span></div>
+                            <div class="hours-item"><span class="day">Saturday</span><span class="time">11:00 AM - 11:00 PM</span></div>
+                            <div class="hours-item"><span class="day">Sunday</span><span class="time">10:00 AM - 2:30 PM</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <!-- Customization Modal -->
+    <div id="customizationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCustomizationModal()">&times;</span>
+            <h2 id="modalItemName"></h2>
+            <p class="modal-item-price" id="modalItemPrice"></p>
+            
+            <div class="customization-section">
+                <h3>Customization Options</h3>
+                <div class="customization-options">
+                    <label class="customization-option">
+                        <input type="checkbox" name="customization" value="extra-cheese"> Extra Cheese (+$0.50)
+                    </label>
+                    <label class="customization-option">
+                        <input type="checkbox" name="customization" value="no-onion"> No Onion
+                    </label>
+                    <label class="customization-option">
+                        <input type="checkbox" name="customization" value="no-cilantro"> No Cilantro
+                    </label>
+                    <label class="customization-option">
+                        <input type="checkbox" name="customization" value="extra-sauce"> Extra Sauce (+$0.25)
+                    </label>
+                    <label class="customization-option">
+                        <input type="checkbox" name="customization" value="spicy"> Make it Spicy
+                    </label>
+                </div>
+            </div>
+
+            <div class="drinks-section">
+                <h3>Add a Drink</h3>
+                <select id="drinkSelect" class="drink-select" onchange="handleDrinkChange()">
+                    <option value="">No drink</option>
+                    <option value="soda">Soda - $2.00</option>
+                    <option value="water">Water - $1.00</option>
+                    <option value="juice">Juice - $2.50</option>
+                    <option value="iced-tea">Iced Tea - $2.00</option>
+                    <option value="lemonade">Lemonade - $2.50</option>
+                </select>
+                <div id="sodaSelection" class="soda-selection" style="display: none;">
+                    <label>Choose Your Soda:</label>
+                    <select id="sodaTypeSelect" class="soda-type-select" onchange="updateModalTotal()">
+                        <option value="pepsi">Pepsi</option>
+                        <option value="starry">Starry</option>
+                        <option value="coke">Coke</option>
+                        <option value="sprite">Sprite</option>
+                        <option value="dr-pepper">Dr. Pepper</option>
+                        <option value="root-beer">Root Beer</option>
+                        <option value="mountain-dew">Mountain Dew</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="quantity-section">
+                <label>Quantity:</label>
+                <div class="quantity-controls">
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="number" id="itemQuantity" value="1" min="1" max="10">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+            </div>
+
+            <div class="modal-total">
+                <strong>Total: $<span id="modalTotal">0.00</span></strong>
+            </div>
+
+            <button class="add-to-cart-modal-btn" onclick="addItemToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <span class="close-cart" onclick="closeCart()">&times;</span>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart-message">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn" onclick="startCheckout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content checkout-content">
+            <span class="close-modal" onclick="closeCheckoutModal()">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkoutForm" class="checkout-form">
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone *</label>
+                    <input type="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email">
+                </div>
+                <div class="form-group">
+                    <label>Pickup Time *</label>
+                    <input type="datetime-local" required>
+                </div>
+                <div class="form-group">
+                    <label>Special Instructions</label>
+                    <textarea id="specialInstructions" rows="3" placeholder="Any allergies, dietary restrictions, or special requests..."></textarea>
+                </div>
+                <div class="checkout-total">
+                    <strong>Total: $<span id="checkoutTotal">0.00</span></strong>
+                </div>
+                <div class="payment-options">
+                    <h3>Payment Method</h3>
+                    <div class="payment-option">
+                        <input type="radio" id="payInPerson" name="paymentMethod" value="in-person" checked>
+                        <label for="payInPerson">Pay in Person (Cash, Card, or Mobile Pay)</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="payOnline" name="paymentMethod" value="online">
+                        <label for="payOnline">Pay Online Now (Coming Soon)</label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-order-btn">Submit Order</button>
+                <p class="checkout-note">You'll receive a confirmation text/email. Orders are pickup only at the food truck location.</p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Add "Add to Cart" buttons to all menu items that don't have them
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuItems = document.querySelectorAll('.menu-item-info');
+            menuItems.forEach(item => {
+                // Check if button already exists
+                if (item.querySelector('.add-to-cart-btn')) return;
+                
+                const itemName = item.querySelector('.item-name').textContent;
+                const priceText = item.querySelector('.item-price').textContent;
+                const price = parseFloat(priceText.replace('$', ''));
+                const category = item.closest('.menu-category')?.querySelector('.category-title')?.textContent || 'Menu';
+                
+                const button = document.createElement('button');
+                button.className = 'add-to-cart-btn';
+                button.textContent = 'Add to Cart';
+                button.onclick = () => openCustomizationModal(itemName, price, category);
+                item.appendChild(button);
+            });
+        });
+    </script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
+
